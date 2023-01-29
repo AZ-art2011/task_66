@@ -3,7 +3,7 @@
 // M = 1; N = 15 -> 120
 // M = 4; N = 8. -> 30
 
-Console.WriteLine("Укажите гранницы диапазона.");
+Console.WriteLine("Укажите границы диапазона.");
 Console.WriteLine("Нижняя M:");
 int NumM = Convert.ToInt32(Console.ReadLine());
 
