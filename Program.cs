@@ -1,25 +1,24 @@
-﻿/*Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму
-натуральных элементов в промежутке от M до N. Выполнить с помощью рекурсии.
-M = 1; N = 15 -> 120
-M = 4; N = 8. -> 30
-*/
+﻿//Задача 66. Задайте значения M и N. Найдите сумму
+// натуральных элементов в промежутке от M до N с помощью рекурсии.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
-Console.WriteLine("Введите начальное число M:");
-int numberM = int.Parse(Console.ReadLine());
+Console.WriteLine("Укажите гранницы диапазона.");
+Console.WriteLine("Нижняя M:");
+int NumM = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите начальное число M:");
-int numberN = int.Parse(Console.ReadLine());
+Console.WriteLine("Верхняя N:");
+int NumN = Convert.ToInt32(Console.ReadLine());
 
-///Метод нахождения суммы натуральных элементов в промежутке от M до N
-void GapNumberSum (int numberM, int numberN, int sum)
+void NumSum (int NumM, int NumN, int sum)
 {
-    if (numberM > numberN) 
+    if (NumM > NumN) 
     {
-        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
+        Console.WriteLine($"Сумма элементов в указанном диапазоне: {sum}"); 
         return;
     }
-    sum = sum + (numberM++);
-    GapNumberSum(numberM, numberN, sum);
+    sum = sum + (NumM++);
+    NumSum(NumM, NumN, sum);
 }
 
-GapNumberSum(numberM, numberN, 0);
+NumSum(NumM, NumN, 0);
